@@ -690,6 +690,7 @@ GameObject:
   - component: {fileID: 1246320334}
   - component: {fileID: 1246320333}
   - component: {fileID: 1246320337}
+  - component: {fileID: 1246320338}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -726,6 +727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  characterData: {fileID: 11400000, guid: 3c9d4ecdc35719a4180de4ffd9c503a2, type: 2}
 --- !u!136 &1246320334
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -824,11 +826,24 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1246320338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246320331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d81229cf87e38a4c9b5214832ec96de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
