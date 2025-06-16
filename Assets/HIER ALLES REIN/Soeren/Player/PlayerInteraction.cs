@@ -32,18 +32,23 @@ public class PlayerInteraction : MonoBehaviour
         currentInteractable = null;
 
         Ray ray = new Ray(transform.position + Vector3.up * 0.5f, transform.forward);
+        Debug.Log($"Ray origin: {ray.origin}, direction: {ray.direction}");
+        Debug.DrawRay(ray.origin, ray.direction * interactionRange, Color.green, 0.1f);
         if (Physics.Raycast(ray, out RaycastHit hit, interactionRange, interactableLayer))
         {
+            Debug.Log($"Raycast hit: {hit.collider.name} at distance {hit.distance}");
             currentInteractable = hit.collider.GetComponent<Interactable>();
 
             if (currentInteractable != null)
             {
                 // Optional: Zeige Prompt im UI
-                UIManager.Instance?.ShowPrompt(currentInteractable.GetPrompt());
+                if (UIManager.Instance != null)
+                    UIManager.Instance.ShowPrompt(currentInteractable.GetPrompt());
                 return;
             }
         }
 
-        UIManager.Instance?.HidePrompt();
+        if (UIManager.Instance != null)
+            UIManager.Instance.HidePrompt();
     }
 }
