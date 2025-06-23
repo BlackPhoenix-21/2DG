@@ -26,7 +26,6 @@ public class Interactable : MonoBehaviour
 
     private void Reset()
     {
-        Debug.Log($"[Interactable] Reset wird aufgerufen bei {gameObject.name}");
         EnsureMainCollider();
         SetupForInteractionType();
     }
