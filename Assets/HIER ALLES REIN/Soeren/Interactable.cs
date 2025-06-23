@@ -10,7 +10,6 @@ public enum InteractionType
     Pickup
 }
 
-[RequireComponent(typeof(Collider))]
 public class Interactable : MonoBehaviour
 {
     [Header("Interaktions-Einstellungen")]
@@ -39,16 +38,13 @@ public class Interactable : MonoBehaviour
 
     private void EnsureMainCollider()
     {
+        // Prüfe, ob ein 2D-Collider existiert, ansonsten füge einen BoxCollider2D hinzu
         Collider2D mainCollider = GetComponent<Collider2D>();
-        if (mainCollider != null)
-        {
-            mainCollider.isTrigger = false;
-        }
-        else
+        if (mainCollider == null)
         {
             mainCollider = gameObject.AddComponent<BoxCollider2D>();
-            mainCollider.isTrigger = false;
         }
+        mainCollider.isTrigger = false;
     }
 
     private void SetupForInteractionType()
