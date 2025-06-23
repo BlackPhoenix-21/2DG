@@ -33,14 +33,20 @@ public class Interactable : MonoBehaviour
     private void OnValidate()
     {
         // Nur im Editor zur Laufzeit
+        EnsureMainCollider();
         SetupForInteractionType();
     }
 
     private void EnsureMainCollider()
     {
-        Collider mainCollider = GetComponent<Collider>();
+        Collider2D mainCollider = GetComponent<Collider2D>();
         if (mainCollider != null)
         {
+            mainCollider.isTrigger = false;
+        }
+        else
+        {
+            mainCollider = gameObject.AddComponent<BoxCollider2D>();
             mainCollider.isTrigger = false;
         }
     }
@@ -56,13 +62,12 @@ public class Interactable : MonoBehaviour
                 triggerZone.transform.SetParent(transform);
                 triggerZone.transform.localPosition = Vector3.zero;
 
-                BoxCollider triggerCollider = triggerZone.AddComponent<BoxCollider>();
+                BoxCollider2D triggerCollider = triggerZone.AddComponent<BoxCollider2D>();
                 triggerCollider.isTrigger = true;
-                triggerCollider.size = new Vector3(3f, 2f, 3f); // Etwas größer als Hauptobjekt
+                triggerCollider.size = new Vector2(3f, 2f); // Etwas größer als Hauptobjekt
 
-                Rigidbody rb = triggerZone.AddComponent<Rigidbody>();
-                rb.isKinematic = true;
-                rb.useGravity = false;
+                Rigidbody2D rb = triggerZone.AddComponent<Rigidbody2D>();
+                rb.gravityScale = 0;
 
                 InteractionTrigger relay = triggerZone.AddComponent<InteractionTrigger>();
                 relay.SetParent(this);
