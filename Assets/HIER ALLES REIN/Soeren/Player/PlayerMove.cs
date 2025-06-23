@@ -3,15 +3,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
-    private Vector3 moveDirection;
-    private Rigidbody rb;
+    private Vector2 moveDirection;
+    private Rigidbody2D rb;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    public void SetDirection(Vector3 direction)
+    public void SetDirection(Vector2 direction)
     {
         moveDirection = direction;
     }
@@ -24,9 +24,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void RotatePlayer()
     {
-        if (moveDirection != Vector3.zero)
+        if (moveDirection != Vector2.zero)
         {
-            rb.rotation = Quaternion.LookRotation(moveDirection);
+            float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+            rb.rotation = angle;
         }
     }
 }

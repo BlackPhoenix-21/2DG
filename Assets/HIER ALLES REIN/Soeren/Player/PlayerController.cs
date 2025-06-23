@@ -28,11 +28,11 @@ public class PlayerController : MonoBehaviour
 
     void HandleInput()
     {
-        Vector3 dir = Vector3.zero;
-        if (Input.GetKey(KeyCode.W)) dir = Vector3.forward;
-        if (Input.GetKey(KeyCode.S)) dir = Vector3.back;
-        if (Input.GetKey(KeyCode.A)) dir = Vector3.left;
-        if (Input.GetKey(KeyCode.D)) dir = Vector3.right;
+        Vector2 dir = Vector2.zero;
+        if (Input.GetKey(KeyCode.W)) dir = Vector2.up;
+        if (Input.GetKey(KeyCode.S)) dir = Vector2.down;
+        if (Input.GetKey(KeyCode.A)) dir = Vector2.left;
+        if (Input.GetKey(KeyCode.D)) dir = Vector2.right;
         movement.SetDirection(dir);
     }
 }

@@ -27,4 +27,22 @@ public class InteractionTrigger : MonoBehaviour
             parent.PlayerExited();
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Enter");
+        if (other.CompareTag("Player") && parent != null)
+        {
+            parent.PlayerEntered(other.gameObject);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("Exit");
+        if (other.CompareTag("Player") && parent != null)
+        {
+            parent.PlayerExited();
+        }
+    }
 }

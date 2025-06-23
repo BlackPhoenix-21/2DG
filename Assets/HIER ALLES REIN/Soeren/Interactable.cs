@@ -34,7 +34,6 @@ public class Interactable : MonoBehaviour
     private void OnValidate()
     {
         // Nur im Editor zur Laufzeit
-        Debug.Log($"[Interactable] OnValidate: Interaktionstyp von {gameObject.name} ist {interactionType}");
         SetupForInteractionType();
     }
 
@@ -44,7 +43,6 @@ public class Interactable : MonoBehaviour
         if (mainCollider != null)
         {
             mainCollider.isTrigger = false;
-            Debug.Log($"[Interactable] Haupt-Collider von {gameObject.name} wurde auf isTrigger = false gesetzt.");
         }
     }
 
@@ -69,14 +67,11 @@ public class Interactable : MonoBehaviour
 
                 InteractionTrigger relay = triggerZone.AddComponent<InteractionTrigger>();
                 relay.SetParent(this);
-
-                Debug.Log($"[Interactable] Trigger-Zone 'InteractionZone' wurde automatisch erstellt für {gameObject.name}");
             }
             else
             {
                 InteractionTrigger relay = existing.GetComponent<InteractionTrigger>();
                 relay.SetParent(this);
-                Debug.Log($"[Interactable] Trigger-Zone 'InteractionZone' existiert bereits bei {gameObject.name}");
             }
         }
     }
@@ -85,14 +80,12 @@ public class Interactable : MonoBehaviour
     {
         if (isPlayerInRange && Input.GetKeyDown(interactionKey))
         {
-            Debug.Log($"[Interactable] Interaktion ausgelöst bei {gameObject.name}");
             Interact(player);
         }
     }
 
     public virtual void Interact(GameObject interactor)
     {
-        Debug.Log($"[Interactable] {gameObject.name} wurde interagiert. Typ: {interactionType}");
         onInteract?.Invoke();
     }
 
@@ -105,7 +98,6 @@ public class Interactable : MonoBehaviour
     {
         isPlayerInRange = true;
         player = go;
-        Debug.Log($"[Interactable] Spieler hat Trigger-Zone von {gameObject.name} betreten.");
         if (UIManager.Instance != null)
             UIManager.Instance.ShowPrompt(promptText);
     }
@@ -114,7 +106,6 @@ public class Interactable : MonoBehaviour
     {
         isPlayerInRange = false;
         player = null;
-        Debug.Log($"[Interactable] Spieler hat Trigger-Zone von {gameObject.name} verlassen.");
         if (UIManager.Instance != null)
             UIManager.Instance.HidePrompt();
     }
