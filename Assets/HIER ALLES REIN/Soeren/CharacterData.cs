@@ -7,28 +7,32 @@ public class CharacterData : ScriptableObject
     public BaseStats baseStats;
     public MovementStats movementStats;
     public CombatStats combatStats;
+
+
 }
 
 [System.Serializable]
 public class BaseStats
 {
-    public int maxHP;
-    public int maxMP;
-    public int level;
+    public int maxHPInt;
+    public int maxMPInt;
+
+    [HideInInspector]
+    public int maxHP, currentHP, maxMP, currentMP, level;
 }
 
 [System.Serializable]
 public class CombatStats
 {
-    public int attack;
-    public int defense;
-    public float criticalChance;
-    public float attackSpeed;
+    public int attackInt;
+    public int defenseInt;
+    public float criticalChanceInt;
+    public float attackSpeedInt;
 }
 
 [System.Serializable]
 public class MovementStats
 {
-    public float moveSpeed = 5f;
+    public float moveSpeedInt = 5f;
 }
 
