@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
         movement = GetComponent<PlayerMovement>();
         combat = GetComponent<PlayerCombat>();
 
+        characterData = GameManager.instance.playerData;
         movement.moveSpeed = characterData.movementStats.moveSpeed;
         combat.attack = characterData.combatStats.attack;
         combat.criticalChance = characterData.combatStats.criticalChance;
