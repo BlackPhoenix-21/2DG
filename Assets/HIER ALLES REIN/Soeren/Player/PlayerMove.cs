@@ -6,11 +6,15 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveDirection;
     private Rigidbody2D rb;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>(); // подключаем Animator
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     public void SetDirection(Vector2 direction)
@@ -23,6 +27,12 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("MoveX", direction.x);
             animator.SetFloat("MoveY", direction.y);
             animator.SetBool("IsMoving", direction != Vector2.zero);
+            // Flip по горизонтали для левого направления
+            if (direction.x != 0)
+            {
+                spriteRenderer.flipX = direction.x < 0;
+            }
+
         }
     }
 

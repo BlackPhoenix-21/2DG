@@ -50,8 +50,7 @@ public class Collectible : MonoBehaviour
                 break;
             case CollectibleType.Health:
                 Debug.Log($"Gesundheit eingesammelt! Wert: {value}");
-                // Beispiel: Spieler-Gesundheit wiederherstellen
-                // player.GetComponent<PlayerHealth>().Heal(value);
+                player.GetComponent<PlayerController>().characterData.baseStats.maxHP += (int)value; // Beispiel: Spieler-Gesundheit erhöhen
                 break;
             case CollectibleType.Score:
                 Debug.Log($"Punkte eingesammelt! Wert: {value}");
