@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [HideInInspector]
     public CharacterData characterData;
 
     private PlayerMovement movement;
