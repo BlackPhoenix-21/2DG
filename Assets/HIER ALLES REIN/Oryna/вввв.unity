@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 136231628}
   - component: {fileID: 136231630}
   - component: {fileID: 136231632}
+  - component: {fileID: 136231633}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -208,7 +209,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1160119424, guid: 715192ac4d81c2c47a3363f903932f50, type: 3}
+  m_Sprite: {fileID: 359699666, guid: c0d79b39236abe84f81be08a1a9a0fec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -286,6 +287,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: 0
   criticalChance: 0
+  weapon: {fileID: 0}
+  isAttacking: 0
 --- !u!50 &136231632
 Rigidbody2D:
   serializedVersion: 5
@@ -313,6 +316,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &136231633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136231621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b439dcfe9a96b2d4bb04cd8881b7fefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentGameState: 0
+  playerData: {fileID: 11400000, guid: 8d24fcda158288b4e99626e875598bc4, type: 2}
+  isTransitioning: 0
 --- !u!1 &727865227
 GameObject:
   m_ObjectHideFlags: 0
