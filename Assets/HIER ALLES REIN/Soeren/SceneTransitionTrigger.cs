@@ -12,6 +12,14 @@ public class SceneTransitionTrigger : MonoBehaviour
 
     private bool isTransitioning = false;
 
+    private void Start()
+    {
+        if (GameManager.instance.isTransitioning)
+        {
+            StartCoroutine(FadeOut());
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Trigger entered: " + other.name);
@@ -24,6 +32,7 @@ public class SceneTransitionTrigger : MonoBehaviour
     private IEnumerator FadeAndSwitchScene()
     {
         isTransitioning = true;
+        GameManager.instance.isTransitioning = true;
 
         // Blende einblenden (Alpha von 0 auf 1)
         float timer = 0f;
@@ -38,5 +47,21 @@ public class SceneTransitionTrigger : MonoBehaviour
         // Szene wechseln
         SceneManager.LoadScene(targetSceneName);
         // Optional: Spawnposition kann in der neuen Szene genutzt werden
+    }
+
+    private IEnumerator FadeOut()
+    {
+        isTransitioning = false;
+        GameManager.instance.isTransitioning = false;
+
+        // Blende einblenden (Alpha von 1 auf 0)
+        float timer = 0f;
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+            fadeCanvasGroup.alpha = Mathf.Lerp(1f, 0f, timer / fadeDuration);
+            yield return null;
+        }
+        fadeCanvasGroup.alpha = 0f;
     }
 }

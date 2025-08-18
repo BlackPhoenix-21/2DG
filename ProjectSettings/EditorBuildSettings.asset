@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/HIER ALLES REIN/Oryna/2.unity
     guid: 6dbdd62300222ae4cb330c0c6dced56f
   - enabled: 1
-    path: Assets/HIER ALLES REIN/Chris/Assets/Szene2.unity
+    path: Assets/HIER ALLES REIN/Chris/Scenes/Szene2.unity
     guid: fa7b81c02cdaf5d4a8dec82ece0e8142
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

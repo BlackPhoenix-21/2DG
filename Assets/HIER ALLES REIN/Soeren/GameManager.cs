@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     public CharacterData playerData;
     private GameObject player;
 
+    [HideInInspector]
+    public bool isTransitioning = false;
+
     private void Awake()
     {
         if (instance == null)
