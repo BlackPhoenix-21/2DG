@@ -7,9 +7,11 @@ public class PlayerController : MonoBehaviour
 
     private PlayerMovement movement;
     private PlayerCombat combat;
+    private Animator animator;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         movement = GetComponent<PlayerMovement>();
         combat = GetComponent<PlayerCombat>();
 
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
         {
             // Animation
             combat.isAttacking = true;
+            animator.SetTrigger("Attack");
         }
     }
 
