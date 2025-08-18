@@ -24,7 +24,8 @@ public class PlayerController : MonoBehaviour
         HandleInput();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            combat.Attack();
+            // Animation
+            combat.isAttacking = true;
         }
     }
 
