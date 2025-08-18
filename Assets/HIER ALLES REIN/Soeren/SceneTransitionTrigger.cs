@@ -14,6 +14,7 @@ public class SceneTransitionTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Trigger entered: " + other.name);
         if (!isTransitioning && other.CompareTag("Player"))
         {
             StartCoroutine(FadeAndSwitchScene());

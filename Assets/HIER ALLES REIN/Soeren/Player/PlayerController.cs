@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private PlayerMovement movement;
     private PlayerCombat combat;
 
-    void Awake()
+    void Start()
     {
         movement = GetComponent<PlayerMovement>();
         combat = GetComponent<PlayerCombat>();
