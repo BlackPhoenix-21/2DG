@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Level
+  - shootPoint
+  - Ball
+  - MagicBall
   layers:
   - Default
   - TransparentFX

@@ -16,11 +16,13 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
+    
+    public bool isBlocked = false;
 
     public void SetDirection(Vector2 direction)
     {
         moveDirection = direction;
-
+        if (isBlocked) return;
         // Обновляем параметры анимации
         if (animator != null)
         {
