@@ -393,6 +393,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6666920416501508602, guid: d8715dc3548165747b8781366d18aab1, type: 3}
+      propertyPath: attack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6666920416501508602, guid: d8715dc3548165747b8781366d18aab1, type: 3}
+      propertyPath: criticalChance
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8208973369841813046, guid: d8715dc3548165747b8781366d18aab1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.8148155
@@ -1123,7 +1131,7 @@ GameObject:
   - component: {fileID: 1350539802}
   - component: {fileID: 1350539801}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: FadeInOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -27,7 +27,7 @@ MonoBehaviour:
   combatStats:
     attackInt: 2
     defenseInt: 2
-    criticalChanceInt: 2
+    criticalChanceInt: 0.1
     attackSpeedInt: 2
     attack: 1
     defense: 1
