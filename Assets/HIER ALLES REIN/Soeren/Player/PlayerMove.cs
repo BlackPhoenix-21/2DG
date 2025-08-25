@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
-    private Vector2 moveDirection;
+    public Vector2 moveDirection;
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
-    
+
     public bool isBlocked = false;
 
     public void SetDirection(Vector2 direction)

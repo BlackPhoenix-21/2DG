@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class PlayerController : MonoBehaviour
 {
     [HideInInspector]
     public CharacterData characterData;
+    public Vector2 lookAt = Vector2.down;
 
     private PlayerMovement movement;
     private PlayerCombat combat;
@@ -39,6 +41,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.S)) dir = Vector2.down;
         if (Input.GetKey(KeyCode.A)) dir = Vector2.left;
         if (Input.GetKey(KeyCode.D)) dir = Vector2.right;
+        if (dir != Vector2.zero && dir != lookAt) lookAt = dir;
         movement.SetDirection(dir);
     }
 }
