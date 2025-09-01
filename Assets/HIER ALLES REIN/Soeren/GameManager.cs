@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameState currentGameState;
     public CharacterData playerData;
+    public bool menuActiv = true;
 
     public List<GameObject> Level = new();
     public GameObject currentLevel;
