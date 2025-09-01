@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>(); // подключаем Animator
         spriteRenderer = GetComponent<SpriteRenderer>();
-
     }
 
     public bool isBlocked = false;
