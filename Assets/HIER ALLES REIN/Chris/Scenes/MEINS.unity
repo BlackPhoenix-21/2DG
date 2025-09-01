@@ -1984,7 +1984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c158f276ea89249bd862bba95ac0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSceneName: Level 4
+  targetSceneName: Level 3
   spawnPosition: {fileID: 1705962965}
   fadeCanvasGroup: {fileID: 1213946095}
   fadeDuration: 1
@@ -3863,7 +3863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c158f276ea89249bd862bba95ac0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSceneName: Level 3
+  targetSceneName: Level 2
   spawnPosition: {fileID: 1705962965}
   fadeCanvasGroup: {fileID: 1213946095}
   fadeDuration: 1
