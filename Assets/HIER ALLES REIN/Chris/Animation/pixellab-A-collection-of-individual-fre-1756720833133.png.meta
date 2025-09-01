@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b73a4788d3763a649a7b3137caba8c01
+guid: 36aaa4d08df17e6499b957f7430639f2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,100 +95,12 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: high grass_0
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 542
-        width: 452
-        height: 476
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 658690015c87075479b4e63e6dce626d
-      internalID: 1420293374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: high grass_2
-      rect:
-        serializedVersion: 2
-        x: 569
-        y: 542
-        width: 452
-        height: 476
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f721a3742e62ce45ab1919908f66719
-      internalID: 551299720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: high grass_4
-      rect:
-        serializedVersion: 2
-        x: 569
-        y: 45
-        width: 452
-        height: 476
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c151e8365a695654c8d9509535986c32
-      internalID: -2145729226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: high grass_5
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 45
-        width: 452
-        height: 476
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ca69d460aafadc44a478db3988f7c7b
-      internalID: 636279875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d8392abe0e608ce48989000fd7735011
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -197,13 +109,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      high grass_0: 1420293374
-      high grass_1: -397303946
-      high grass_2: 551299720
-      high grass_3: 1430084844
-      high grass_4: -2145729226
-      high grass_5: 636279875
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
