@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
+   /* private void Start()
     {
         Level.AddRange(GameObject.FindGameObjectsWithTag("Level"));
         Level.Sort((a, b) => a.name.CompareTo(b.name));
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
             Level[i].SetActive(false);
         }
         gameObject.AddComponent<Fade>();
-    }
+    }*/
 }
 
 public class Fade : MonoBehaviour
