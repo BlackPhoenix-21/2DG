@@ -25,6 +25,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.instance.menuActiv)
+        {
+            return;
+        }
         HandleInput();
         if (Input.GetKeyDown(KeyCode.Space))
         {
