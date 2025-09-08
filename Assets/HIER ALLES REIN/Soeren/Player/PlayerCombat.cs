@@ -102,7 +102,7 @@ public class PlayerCombat : MonoBehaviour
     {
         canAttack = true;
         isAttacking = false;
-        canAttack = true; 
+        canAttack = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -122,6 +122,4 @@ public class PlayerCombat : MonoBehaviour
 
         isAttacking = false;
     }
-
-    
 }
