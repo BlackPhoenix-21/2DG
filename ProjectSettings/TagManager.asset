@@ -8,6 +8,7 @@ TagManager:
   - shootPoint
   - Ball
   - MagicBall
+  - Enemy
   layers:
   - Default
   - TransparentFX
